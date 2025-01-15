@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/photos': {
-        target: "http://44.220.137.157:3000",
+        target: "http://localhost:3000",
         changeOrigin: true,
       },
     },
