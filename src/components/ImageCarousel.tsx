@@ -22,7 +22,7 @@ const ImageCarousel = () => {
     setLoading(true);
     try {
       const offset = (page - 1) * size;
-      const response = await axios.get("http://localhost:3000/photos", {
+      const response = await axios.get("/photos", {
         params: {
           limit: size,
           offset,

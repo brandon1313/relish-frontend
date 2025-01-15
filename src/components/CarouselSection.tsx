@@ -13,7 +13,7 @@ const CarouselSection = ({
   <Col span={16}>
     {loading ? (
       <Spin size="large" />
-    ) : (
+    ) : data.length === 0 ? <div>No data to display</div> : (
       <Carousel
         afterChange={onSlideChange}
         arrows
@@ -30,6 +30,7 @@ const CarouselSection = ({
           color: "#fff",
         }}
       >
+        
         {data.map((item) => (
           <div key={item.id}>
             <Image
